@@ -13,12 +13,14 @@ public class CodingHours {
 
         System.out.println("Coding hours in the Semester: " + 17 * 5 * 6);
 
-        double weeklyWorkHours = 52;
+        int weeklyWorkHours = 52;
         int semLength = 17;
-        int days = 5;
-        int semesterHours;
+        int workDays = 5;
+        int dailyHours = 6;
 
-        System.out.println( weeklyWorkHours * semLength  );
+        int codingHoursInSemester = (dailyHours * (workDays * semLength));
+
+        System.out.println( ( (float) codingHoursInSemester / (semLength * weeklyWorkHours)) * 100 + "%"  );
 
     }
 }
