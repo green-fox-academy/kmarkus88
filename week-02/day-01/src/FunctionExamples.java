@@ -9,17 +9,17 @@ public class FunctionExamples {
         increaseNumber(n);
         System.out.println(n);
 
-        increaseElement(numbers);
+        //increaseElement(numbers);
 
         //System.out.println(increaseNumber(2));
     }
 
-    public static [] increaseElement(int[] numbers) {
-        for (int i = 0; i < numbers.length; i++) {
-            ++numbers[i];
-        }
-        return;
-    }
+   // public static [] increaseElement(int[] numbers) {
+    //    for (int i = 0; i < numbers.length; i++) {
+     //       ++numbers[i];
+      //  }
+      //  return;
+   // }
 
     public static int increaseNumber(int number) {
         return ++number;
