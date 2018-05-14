@@ -9,8 +9,13 @@ public class PrintBigger {
         int a = scanner.nextInt();
         System.out.println("and give me an another!");
         int b = scanner.nextInt();
-        int bigger = (a - b > 0) ? a : b;
-        System.out.println("The bigger number is: " + bigger);
+        if (a < b) {
+            System.out.println(b);
+        } else if (a > b) {
+            System.out.println(a);
+        } else {
+            System.out.println("Try again.");
+        }
 
     }
 
