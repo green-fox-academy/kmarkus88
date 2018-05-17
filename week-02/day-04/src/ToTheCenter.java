@@ -1,8 +1,6 @@
 import javax.swing.*;
 
 import java.awt.*;
-import java.sql.SQLOutput;
-import java.util.Scanner;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
@@ -12,24 +10,27 @@ public class ToTheCenter {
         // The x and y coordinates of the line's starting point
         // and draws a line from that point to the center of the canvas.
         // Draw 3 lines with that function. Use loop for that.
-        int a = 3;
-        System.out.println("Give me the X and Y coordinates from 0 to 400!");
-        Scanner scanner = new Scanner(System.in);
-
-        while ( <= a)
-        System.out.println("First the X coordinate.");
-        int x = scanner.nextInt();
-        System.out.println("Give me the Y coordinate!");
-        int y = scanner.nextInt();
 
 
+        int x = (int) (Math.random() * 400);
+        int y = (int) (Math.random() * 400);
+        lines(x, y, graphics);
+    }
+    public static void lines ( int x, int y, Graphics graphics){
+        for (int i = 1; i <=3 ; i++) {
+            int r = (int) (Math.random() * 256);
+            int g = (int) (Math.random() * 256);
+            int b = (int) (Math.random() * 256);
+            graphics.setColor(new Color(r, g, b));
+            graphics.drawLine(x * i, y * i,200,200);
 
-        graphics.setColor(Color.GREEN);
-        graphics.drawLine(x,y,200,200);
-
+        }
 
 
     }
+
+
+
 
     // Don't touch the code below
     static int WIDTH = 400;
