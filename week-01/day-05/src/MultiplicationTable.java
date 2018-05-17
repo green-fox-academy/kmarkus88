@@ -8,8 +8,8 @@ public class MultiplicationTable {
 
         int number = scanner.nextInt();
 
-        for (int multiply = 0; multiply <= 10; multiply++) {
-            System.out.println(multiply + " * " + number + " = " + (multiply * number));
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i + " * " + number + " = " + (i * number));
 
         }
 // Create a program that asks for a number and prints the multiplication table with that number
