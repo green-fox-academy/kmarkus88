@@ -4,13 +4,23 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class SquareInTheCenter {
-
+public class Horizontal {
     public static void mainDraw(Graphics graphics) {
-        // Draw a green 10x10 square to the canvas' center.
-        graphics.setColor(Color.GREEN);
-        graphics.drawRect(195, 195, 10, 10);
+        // Create a line drawing function that takes 2 parameters:
+        // The x and y coordinates of the line's starting point
+        // and draws a 50 long horizontal line from that point.
+        // Draw 3 lines with that function. Use loop for that.
 
+        int x = 30;
+        int y = 30;
+        lines(x, y, graphics);
+    }
+    public static void lines ( int x, int y, Graphics graphics){
+        for (int i = 1; i <=3 ; i++) {
+            graphics.setColor(new Color(45, 200, 145));
+            graphics.drawLine(x * i, y * i,x + 50,y * i);
+
+        }
 
     }
 
@@ -32,7 +42,6 @@ public class SquareInTheCenter {
         protected void paintComponent(Graphics graphics) {
             super.paintComponent(graphics);
             mainDraw(graphics);
-
         }
     }
 }

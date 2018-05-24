@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ChangeElement {
     public static void main(String[] args) {
         //# - Create an array variable named `s`
@@ -10,6 +12,7 @@ public class ChangeElement {
         s[3] = 4;
 
         System.out.println(s[3]);
+        System.out.println(Arrays.toString(s));
 
 
     }
