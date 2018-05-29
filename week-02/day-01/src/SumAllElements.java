@@ -1,3 +1,5 @@
+import java.util.stream.IntStream;
+
 public class SumAllElements {
     public static void main(String[] args) {
         // - Create an array variable named `ai`
@@ -9,5 +11,11 @@ public class SumAllElements {
             sum = sum + ai[i];
         }
         System.out.println(sum);
+
+        //OR
+
+         int[] ai2 = {3, 4, 5, 6 ,7};
+         int sum2 = IntStream.of(ai2).sum();
+         System.out.println("Second solution is: " + sum2);
     }
 }

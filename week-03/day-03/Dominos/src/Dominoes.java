@@ -4,7 +4,8 @@ import java.util.List;
 public class Dominoes {
     public static void main(String[] args) {
         List<Domino> dominoes = initializeDominoes();
-        System.out.println(dominoes.get(1).getValues()[0]);
+        System.out.println(dominoes);
+        System.out.println(dominoes.get(2).getValues()[0]);
         System.out.println(dominoes.size());
         // You have the list of Dominoes
         // Order them into one snake where the adjacent dominoes have the same numbers on their adjacent sides

@@ -1,5 +1,3 @@
-import sun.font.FontRunIterator;
-
 import javax.swing.*;
 
 import java.awt.*;
@@ -12,29 +10,23 @@ public class FillWithRectangles {
     public static void mainDraw(Graphics graphics){
         // draw four different size and color rectangles.
         // avoid code duplication.
-        Random random = new Random();
-        int x = random.nextInt(400);
-        int y = random.nextInt(400);
-        int width = random.nextInt(400);
-        int height = random.nextInt(400);
-
-        for (int i = 0; i <= 4; i++) {
-            graphics.setColor(Color.GREEN);
-            graphics.fillRect(x, y, height, width);
-
+        for (int i = 0; i <4 ; i++) {
+            rectangleDrawer(graphics);
         }
-       // graphics.setColor(Color.GREEN);
-        //graphics.drawRect(x, y, height, width);
 
-
+    }
+    public static void rectangleDrawer (Graphics graphics) {
+        Random random = new Random();
+        graphics.setColor(new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256)));
+        graphics.fillRect(random.nextInt(300), random.nextInt(300), random.nextInt(300), random.nextInt(300));
     }
 
     //    Don't touch the code below
-    static int WIDTH = 320;
-    static int HEIGHT = 343;
+    static int WIDTH = 400;
+    static int HEIGHT = 400;
     public static void main(String[] args) {
-        JFrame jFrame = new JFrame("Drawing");
-        jFrame.setSize(new Dimension(WIDTH, HEIGHT));
+        JFrame jFrame = new JFrame("Ex07FourRectangles");
+        jFrame.setSize(new Dimension(WIDTH, HEIGHT + 23));
         jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         jFrame.add(new ImagePanel());
         jFrame.setLocationRelativeTo(null);
