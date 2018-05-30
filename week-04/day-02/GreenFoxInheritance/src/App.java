@@ -10,6 +10,7 @@ public class App {
     people.add(jane);
     Student john = new Student("John Doe", 20, "male", "BME");
     people.add(john);
+    john.clone().introduce();
     Student student = new Student();
     people.add(student);
     Mentor gandhi = new Mentor("Gandhi", 148, "male", "senior");
