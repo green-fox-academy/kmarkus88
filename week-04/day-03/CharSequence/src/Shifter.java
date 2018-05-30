@@ -1,5 +1,7 @@
 public class Shifter implements CharSequence{
 
+  String text;
+
   @Override
   public int length() {
     return 0;

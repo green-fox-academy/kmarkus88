@@ -8,16 +8,16 @@ public class Gnirts implements CharSequence {
 
   @Override
   public int length() {
-    return this.text.length();
+    return text.length();
   }
 
   @Override
   public char charAt(int index) {
-    return this.text.charAt(this.text.length() - 1 - index);
+    return text.charAt(index);
   }
 
   @Override
   public CharSequence subSequence(int start, int end) {
-    return this.text.subSequence(start, end);
+    return text.subSequence(start, end);
   }
 }
