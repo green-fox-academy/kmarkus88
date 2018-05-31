@@ -6,9 +6,10 @@ public class ApplesTest {
 
   @Test
   public void getApple() {
+    Apples apples = new Apples();
     String expectedResult = "apple";
-    String inputText = "apple";
+    String result = apples.getApple();
 
-    assertEquals(expectedResult, inputText);
+    assertEquals(expectedResult, result);
   }
 }
