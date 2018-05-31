@@ -25,9 +25,19 @@ public class SumTest {
     Sum sumOfTheElements = new Sum();
     ArrayList<Integer> numbers = new ArrayList<>();
 
-    Integer expectedResult = 1;
+    Integer expectedResult = 0;
 
     assertEquals(expectedResult, sumOfTheElements.sumElements(numbers));
   }
 
+  @Test
+  public void with_one_element() {
+    Sum sumOfTheElements = new Sum();
+    ArrayList<Integer> numbers = new ArrayList<>();
+    numbers.add(88);
+
+    Integer expectedResult = 88;
+
+    assertEquals(expectedResult, sumOfTheElements.sumElements(numbers));
+  }
 }
