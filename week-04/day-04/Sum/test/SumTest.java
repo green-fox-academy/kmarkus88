@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class SumTest {
 
   @Test
-  public void should_sumElements() {
+  public void with_multiple_elements() {
     Sum sumOfTheElements = new Sum();
     ArrayList<Integer> numbers = new ArrayList<>();
     numbers.add(1);
@@ -40,4 +40,15 @@ public class SumTest {
 
     assertEquals(expectedResult, sumOfTheElements.sumElements(numbers));
   }
+
+  //@Test
+  //public void with_null() {
+  //  Sum sumOfTheelements = new Sum();
+  //  ArrayList<Integer> numbers = new ArrayList<>();
+  //  numbers = null;
+
+  //  Integer expectedResult = 0;
+
+  //  assertEquals(expectedResult, sumOfTheelements.sumElements(numbers));
+  //}
 }
