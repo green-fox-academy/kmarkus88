@@ -41,14 +41,13 @@ public class SumTest {
     assertEquals(expectedResult, sumOfTheElements.sumElements(numbers));
   }
 
-  //@Test
-  //public void with_null() {
-  //  Sum sumOfTheelements = new Sum();
-  //  ArrayList<Integer> numbers = new ArrayList<>();
-  //  numbers = null;
+  @Test
+  public void with_null() {
+  Sum sumOfTheelements = new Sum();
+  ArrayList<Integer> numbers = null;
 
-  //  Integer expectedResult = 0;
+  Integer expectedResult = 0;
 
-  //  assertEquals(expectedResult, sumOfTheelements.sumElements(numbers));
-  //}
+  assertEquals(expectedResult, sumOfTheelements.sumElements(numbers));
+  }
 }
