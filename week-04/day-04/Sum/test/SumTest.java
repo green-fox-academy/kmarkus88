@@ -43,11 +43,11 @@ public class SumTest {
 
   @Test
   public void with_null() {
-  Sum sumOfTheelements = new Sum();
+  Sum sumOfTheElements = new Sum();
   ArrayList<Integer> numbers = null;
 
   Integer expectedResult = 0;
 
-  assertEquals(expectedResult, sumOfTheelements.sumElements(numbers));
+  assertEquals(expectedResult, sumOfTheElements.sumElements(numbers));
   }
 }
