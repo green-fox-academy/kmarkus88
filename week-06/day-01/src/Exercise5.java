@@ -5,7 +5,6 @@ public class Exercise5 {
   public static void main(String[] args) {
 
     String text = "A kuTya Meg a mAcSka SZep AllaT";
-
     System.out.println(countUppercaseLettersInAString(text));
 
   }
