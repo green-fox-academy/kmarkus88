@@ -12,10 +12,8 @@ public class Exercise4 {
   }
   private static List<Integer> getNumbersWhereSquaredSumIsBigger20(List<Integer> numbers) {
     return numbers.stream()
-            .mapToInt(n -> n)
             .map(n -> n * n)
             .filter(n -> n > 20)
-            .boxed()
             .collect(Collectors.toList());
   }
 }
