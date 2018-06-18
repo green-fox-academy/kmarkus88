@@ -1,12 +1,24 @@
 public class Fox {
 
-  String name;
-  String type;
-  String color;
+  private String name;
+  private String type;
+  private String color;
 
   public Fox(String name, String type, String color) {
     this.color = color;
     this.name = name;
     this.type = type;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public String getType() {
+    return type;
+  }
+
+  public String getColor() {
+    return color;
   }
 }
