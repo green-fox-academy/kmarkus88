@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class Exercise4 {
   public static void main(String[] args) {
 
-    ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(3, 9, 2, 8, 6, 5));
+    ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(3, 9, 2, 8, 6, 5, 1));
 
     System.out.println(getNumbersWhereSquaredSumIsBigger20(numbers));
   }
