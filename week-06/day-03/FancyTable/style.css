@@ -9,6 +9,7 @@ table {
     width: 50%;
     border-collapse: collapse;
     border-style: hidden;
+    border-spacing: 0px;
 }
 
 th {
