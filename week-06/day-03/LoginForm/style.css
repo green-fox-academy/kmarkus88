@@ -8,6 +8,7 @@ form {
     padding: 20px;
     margin: auto;
 
+
 }
 
 #submit {
@@ -19,14 +20,36 @@ form {
 a {
     font-size: 11px;
     color: #6e727a;
+    padding: 0px 10px 20px 165px;
+
 }
 h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    font-weight:100;
+    font-weight:300;
     text-transform: uppercase;
     color: gray;
 }
 div {
     padding-left: 30px;
+}
+label {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+input, label {
+    display: block;
+    padding: 6px 0px;
+}
+
+#email {
+    width: 220px;
+    padding: 8px 10px;
+}
+#password {
+    width: 220px;
+    padding: 8px 10px;
 }
