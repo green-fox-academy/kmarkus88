@@ -6,5 +6,6 @@ Git Lesson Repo ( https://github.com/kmarkus88/git-lesson-repository.git )
 
 Hello World link ( https://github.com/kmarkus88/hello-world.git )
 
-First HTML on github ( https://github.com/kmarkus88/kmarkus88.github.io.git)
+First HTML on github ( https://github.com/kmarkus88/kmarkus88.github.io.git )
 
+Todo App ( https://github.com/kmarkus88/todo-app.git )
