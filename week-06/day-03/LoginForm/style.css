@@ -20,7 +20,7 @@ form {
 a {
     font-size: 11px;
     color: #6e727a;
-    padding: 0px 10px 20px 165px;
+    padding: 0px 0px 0px 165px;
 
 }
 h2 {
@@ -52,4 +52,5 @@ input, label {
 #password {
     width: 220px;
     padding: 8px 10px;
+    display: inline;
 }
