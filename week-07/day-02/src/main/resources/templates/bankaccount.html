@@ -20,7 +20,7 @@
     </tr>
     </thead>
     <tr th:unless="${#lists.isEmpty(bankAccounts)}" th:each="BankAccount : ${bankAccounts}" th:object="${BankAccount}">
-        <td><p th:text="${BankAccountStat.index}"/></td>
+        <td><p th:text="${BankAccountStat.index + 1}"/></td>
         <td><p th:text="*{name}"/></td>
         <td><p th:text="*{balance} + '.00 Zebra'"/></td>
         <td><p th:text="*{animalType}"/></td>
