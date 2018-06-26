@@ -15,11 +15,11 @@ public class MainController {
 
   public MainController() {
     bankAccounts = new ArrayList<>();
-    BankAccount timonacc = new BankAccount("Timon", "4000", "mongoose");
-    BankAccount pumbaacc = new BankAccount("Pumba", "3234", "pig");
-    BankAccount mufasaacc = new BankAccount("Mufasa", "10000", "lion");
-    BankAccount simbaacc = new BankAccount("Simba", "5635", "lion");
-    BankAccount rafikiacc = new BankAccount("Rafiki", "216578", "monkey");
+    BankAccount timonacc = new BankAccount("Timon", "4000", "mongoose", true);
+    BankAccount pumbaacc = new BankAccount("Pumba", "3234", "pig", false);
+    BankAccount mufasaacc = new BankAccount("Mufasa", "10000", "lion", false);
+    BankAccount simbaacc = new BankAccount("Simba", "5635", "lion", false);
+    BankAccount rafikiacc = new BankAccount("Rafiki", "216578", "monkey", false);
     bankAccounts.add(timonacc);
     bankAccounts.add(pumbaacc);
     bankAccounts.add(mufasaacc);
@@ -29,7 +29,7 @@ public class MainController {
 
   @GetMapping("/show")
   public String show(Model model) {
-    BankAccount bankAccount = new BankAccount("Simba", "2000", "lion");
+    BankAccount bankAccount = new BankAccount("Simba", "2000", "lion", false);
     model.addAttribute("bankAccount", bankAccount);
     return "show";
   }

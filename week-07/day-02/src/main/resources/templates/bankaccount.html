@@ -17,6 +17,7 @@
         <th>Name</th>
         <th>Balance</th>
         <th>Animal Type</th>
+        <th>King</th>
     </tr>
     </thead>
     <tr th:unless="${#lists.isEmpty(bankAccounts)}" th:each="BankAccount : ${bankAccounts}" th:object="${BankAccount}">
@@ -24,6 +25,7 @@
         <td><p th:text="*{name}"/></td>
         <td><p th:text="*{balance} + '.00 Zebra'"/></td>
         <td><p th:text="*{animalType}"/></td>
+        <td><p th:text="*{king}"/></td>
     </tr>
 </table>
 </body>
