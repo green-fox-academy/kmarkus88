@@ -8,7 +8,7 @@
 <body>
     <div th:object="${bankAccount}">
         <p th:text="'Name ' + *{name}"/>
-        <p th:text="'Balance ' + *{balance}"/>
+        <p th:text="'Balance ' + *{balance} +'.00 Zebra'"/>
         <p th:text="'Animal Type ' + *{animalType}"/>
     </div>
 </body>
