@@ -1,7 +1,6 @@
-package com.greenfoxacademy.listingtodo;
+package com.greenfoxacademy.listingtodo.model;
 
 public class Todo {
-  //id:Long, title:String, urgent:boolean(default false), done:boolean(default false)
   Long id;
   String title;
   boolean urgent = false;
