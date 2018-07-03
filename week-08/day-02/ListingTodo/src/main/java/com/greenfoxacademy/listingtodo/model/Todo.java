@@ -1,7 +1,5 @@
 package com.greenfoxacademy.listingtodo.model;
 
-import org.springframework.stereotype.Component;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,6 +13,10 @@ public class Todo {
   private String title;
   private Boolean urgent;
   private Boolean done;
+
+  public Todo() {
+
+  }
 
   public Todo(String title) {
     this.title = title;

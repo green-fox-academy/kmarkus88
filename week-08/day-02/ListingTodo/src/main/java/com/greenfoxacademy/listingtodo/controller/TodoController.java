@@ -18,7 +18,10 @@ public class TodoController {
   @GetMapping(value ={"/", "/list"})
     public String list (Model model) {
     model.addAttribute("todo1", new Todo("Start the day"));
-    model.addAttribute("todo2", new Todo("Finish something"));
+    model.addAttribute("todo2", new Todo("Finish H2 workshop1"));
+    model.addAttribute("todo3", new Todo("Finish JPA workshop2"));
+    model.addAttribute("todo4", new Todo("Create a CRUD project"));
+
     return "todolist";
   }
 }
