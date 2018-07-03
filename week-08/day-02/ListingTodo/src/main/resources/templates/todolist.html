@@ -7,10 +7,7 @@
 <body>
 <h1>Todos for today</h1>
 <ul>
-    <li th:text="${todo1.getTitle()}"></li>
-    <li th:text="${todo2.getTitle()}"></li>
-    <li th:text="${todo3.getTitle()}"></li>
-    <li th:text="${todo4.getTitle()}"></li>
+    <li th:each="onetodo : ${todos}" th:text="${onetodo.title}"></li>
 </ul>
 </body>
 </html>
