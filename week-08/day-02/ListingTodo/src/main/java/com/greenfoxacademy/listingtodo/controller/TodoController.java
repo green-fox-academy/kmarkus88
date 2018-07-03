@@ -12,10 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class TodoController {
   //ez pedig ahhoz hogy a pertodoperlist vagy pertodoper url-en jelenjen meg
   @GetMapping(value ={"/", "/list"})
-  //A @ResponseBody ahhoz kellett hogy html file nelkul irjak a localhostra
-  //@ResponseBody
+  @ResponseBody
     public String list (Model model) {
-    //a returnbe pedig jott a szoveg
-    return "index";
+    return "This is my first todo";
   }
 }
