@@ -1,19 +1,24 @@
 package com.greenfoxacademy.listingtodo.controller;
 
+import com.greenfoxacademy.listingtodo.model.Todo;
+import com.greenfoxacademy.listingtodo.repository.TodoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-//ez a @RequestMapping ahhoz kell hogy az osszes oldal a localhost:8080todo oldalon jelenjen meg
 @RequestMapping("/todo")
 public class TodoController {
-  //ez pedig ahhoz hogy a pertodoperlist vagy pertodoper url-en jelenjen meg
+
+  @Autowired
+  TodoRepository todoRepository;
+
   @GetMapping(value ={"/", "/list"})
-  @ResponseBody
     public String list (Model model) {
-    return "This is my first todo";
+    model.addAttribute("todo1", new Todo("Start the day"));
+    model.addAttribute("todo2", new Todo("Finish something"));
+    return "todolist";
   }
 }

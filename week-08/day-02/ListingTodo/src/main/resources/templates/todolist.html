@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>Todo App</title>
+</head>
+<body>
+<h1>Todos today</h1>
+<ul>
+    <li th:text="${todo1.getTitle()}"></li>
+    <li th:text="${todo2.getTitle()}"></li>
+</ul>
+</body>
+</html>

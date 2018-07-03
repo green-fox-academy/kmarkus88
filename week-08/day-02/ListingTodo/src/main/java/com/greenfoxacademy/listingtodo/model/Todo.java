@@ -1,19 +1,25 @@
 package com.greenfoxacademy.listingtodo.model;
 
+import org.springframework.stereotype.Component;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Todo {
-  Long id;
-  String title;
-  boolean urgent = false;
-  boolean done = false;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Long id;
+  private String title;
+  private Boolean urgent;
+  private Boolean done;
 
-  public Todo() {
-  }
-
-  public Todo(Long id, String title, boolean urgent, boolean done) {
-    this.id = id;
+  public Todo(String title) {
     this.title = title;
-    this.urgent = urgent;
-    this.done = done;
+    this.urgent = false;
+    this.done = false;
   }
 
   public Long getId() {
@@ -32,19 +38,19 @@ public class Todo {
     this.title = title;
   }
 
-  public boolean isUrgent() {
+  public Boolean getUrgent() {
     return urgent;
   }
 
-  public void setUrgent(boolean urgent) {
+  public void setUrgent(Boolean urgent) {
     this.urgent = urgent;
   }
 
-  public boolean isDone() {
+  public Boolean getDone() {
     return done;
   }
 
-  public void setDone(boolean done) {
+  public void setDone(Boolean done) {
     this.done = done;
   }
 }
