@@ -19,7 +19,16 @@ public class TodosqlApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    todoRepository.save(new Todo("I have to learn Object Relational Mapping"));
-    todoRepository.save(new Todo("I have to learn Objectjfhfjhgfhjgfjgh Relational Mapping"));
+    todoRepository.save(new Todo("daily task"));
+    todoRepository.save(new Todo("make the beds", false, true));
+    todoRepository.save(new Todo("wake up", true, true));
+    todoRepository.save(new Todo("clean the kitchen"));
+    todoRepository.save(new Todo("cook dinner", true, false));
+    todoRepository.save(new Todo("play ps", true, true));
+    todoRepository.save(new Todo("sleep", true, false));
+    todoRepository.save(new Todo("wash the car"));
+    todoRepository.save(new Todo("slap somebody", true, false));
+    todoRepository.save(new Todo("listen music", true, true));
+    todoRepository.save(new Todo("eat something"));
   }
 }
