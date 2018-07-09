@@ -1,6 +1,6 @@
 package com.greenfoxacademy.rest.models;
 
-public class Error {
+public class Error implements Parent{
 
   private String error;
 
