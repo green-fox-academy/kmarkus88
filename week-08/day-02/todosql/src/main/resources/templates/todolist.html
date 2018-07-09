@@ -2,29 +2,35 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
-    <link rel="stylesheet" th:href="@{/style.css}" />
-    <link href="../static/style.css" th:href="@{/style.css}" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,100" rel="stylesheet">
     <title>Todo CRUD App</title>
 </head>
 <body>
-<h1>Todos for today</h1>
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Done</th>
-        <th>Urgent</th>
-    </tr>
-    </thead>
-<tr>
-    <td><p th:each="onetodo : ${todos}" th:text="${onetodo.id}"></p></td>
-    <td><p th:each="onetodo : ${todos}" th:text="${onetodo.title}"></p></td>
-    <td><p th:each="onetodo : ${todos}" th:text="${onetodo.done}"></p></td>
-    <td><p th:each="onetodo : ${todos}" th:text="${onetodo.urgent}"></p></td>
-</tr>
-</table>
+    <h1>Todos for today</h1>
+    <form action="/todo/add">
+        <input type="submit" value="Add new todo" />
+    </form>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Done</th>
+            <th>Urgent</th>
+            <th>Delete</th>
+            <th>Edit</th>
+        </tr>
+        </thead>
+        <tr th:each="onetodo : ${todos}">
+            <td th:text="${onetodo.id}"></td>
+            <td th:text="${onetodo.title}"></td>
+            <td th:text="${onetodo.done}"></td>
+            <td th:text="${onetodo.urgent}"></td>
+            <td><a th:href="@{${onetodo.id} + '/delete'}">Delete</a></td>
+            <td><a th:href="@{${onetodo.id} + '/edit'}">Edit</a></td>
+        </tr>
+    </table>
     <a href="/todo/list?isActive=true">Done</a>
     <a href="/todo/list?isActive=false">Not Done</a>
     <a href="/todo/">All Todos</a>
