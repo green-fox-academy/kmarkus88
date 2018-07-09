@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
@@ -8,5 +8,11 @@
     <li><a href="/">Homepage</a> </li>
     <h1>Welcome to Programmer Fox Club</h1>
     <p>Please provide a name, so you can associate it to your pet!</p>
+
+    <form action="/login" method="post">
+        Name:
+        <input type="text" name="Name" value="Name">
+        <input type="submit" value="Login">
+    </form>
 </body>
 </html>
