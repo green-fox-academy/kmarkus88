@@ -1,14 +1,11 @@
 package com.greenfoxacademy.rest.models;
 
-public class Error implements Parent{
+public class ErrorMessage {
 
   private String error;
 
-  public Error() {
-  }
-
-  public Error(String message) {
-    this.error = message;
+  public ErrorMessage() {
+    error = "Please provide an input!";
   }
 
   public String getError() {

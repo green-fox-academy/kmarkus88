@@ -1,6 +1,6 @@
 package com.greenfoxacademy.rest.models;
 
-public class Doubled implements Parent{
+public class Doubled{
 
   Integer received;
   Integer result;
